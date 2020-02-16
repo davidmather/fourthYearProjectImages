@@ -1,0 +1,21 @@
+version: "2"
+services:
+  images:
+    image: "davidmather/images"
+    user: "node"
+    container_name: "images"
+    working_dir: /home/node/app
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - ./:/home/node/app
+    ports:
+      - "16004:16004"
+    expose:
+      - "16004"
+    command: "npm start"
+    networks:
+      - shopnetwork
+
+networks:
+  shopnetwork:
