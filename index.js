@@ -5,7 +5,6 @@ const path = require('path');
 const fs = require('fs');
 const app = express();
 const bodyParser = require('body-parser');
-var grpc = require('grpc');
 var compression = require('compression');
 app.use(compression());
 
